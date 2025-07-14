@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>A simple address book</title>
+    <style>
+        body{
+            background: green;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <h1>A simple container</h1>
+    </div>
+
+    <script>
+        //create a simple address book
+        let contacts = {
+                "Amanda": {phone: "+234819564889", email:"amandagirlytechbro@gmail.com"},
+                "muhammed": {phone: "+234678908567", email:"muhmammedthecryptogod@gmail.com"}, 
+        }
+
+        addContacts("Joan","08138041267", "basseyu01@gmail.com");
+        console.log(contacts.joan);
+
+        console.log(contacts);
+
+        //functions
+        function addContacts(name, phone, email){
+            contacts[name] = {phone: phone, email: email};
+            consle.log(`${name} added successfully`);
+        }
+
+        function deleteContacts(name){
+            if(contacts[name]){
+                delete contacts[name];
+                console.log(`contact deleted sucessfully`)
+            }else{
+                alert('contact doesnt exist');
+            }
+
+            function searchAddressBook(name){
+                    if(contact[name]){
+                        console.log(contacts[name]);
+                        alert("Contact address found")
+                    }else{
+                        alert(`contact doesn't exist`)
+                    }
+            
+            }
+        }
+    </script>
+</body>
+</html>
